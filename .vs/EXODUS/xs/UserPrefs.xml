@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{40447863-D300-D07E-0518-D77953BED971}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/KatanaSwing.cs">
+    <Files>
+      <File FileName="Assets/Sci-Fi Styled Modular Pack/Readme.txt" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/KatanaSwing.cs" Line="18" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EXODUS" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Material" expanded="True">
+                <Node name="Katana" expanded="True">
+                  <Node name="Model" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Sci-Fi Styled Modular Pack" expanded="True">
+                <Node name="Readme.txt" selected="True" />
+              </Node>
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="97581254-8764-4e04-bb65-f1fe67fc4c5e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
