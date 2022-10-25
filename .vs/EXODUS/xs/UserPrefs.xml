@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{40447863-D300-D07E-0518-D77953BED971}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/KatanaSWING.cs">
+    <Files>
+      <File FileName="Assets/Scripts/KatanaSWING.cs" Line="19" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EXODUS" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="KatanaSWING.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="97581254-8764-4e04-bb65-f1fe67fc4c5e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
