@@ -5549,6 +5549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 195927928}
   - component: {fileID: 195927929}
+  - component: {fileID: 195927930}
   m_Layer: 0
   m_Name: Weapon Socket
   m_TagString: Untagged
@@ -5615,6 +5616,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &195927930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195927927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae573243b1664415958360d6e65417e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sword: {fileID: 1795540070}
+  AttackCD: 1
+  CanAttack: 1
 --- !u!1 &301734935
 GameObject:
   m_ObjectHideFlags: 0
@@ -13137,23 +13153,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.032633282
+      value: 0.031901285
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.030460387
+      value: 0.029748421
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6816677
+      value: -0.68134916
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7302988
+      value: 0.7306577
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 86.055
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -13161,7 +13177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 174.883
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13482,7 +13498,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &726133948
 Canvas:
   m_ObjectHideFlags: 0
@@ -14238,7 +14254,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23690
+  m_Name: pb_Mesh23700
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14824,7 +14840,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28612
+  m_Name: pb_Mesh23730
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14983,6 +14999,31 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1795540070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: f32442828616b1b4c9e1027923ad9a73, type: 3}
+  m_PrefabInstance: {fileID: 526600854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1795540071
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795540070}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c1624e01bd4045308bf19292df40a15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1874444375
 GameObject:
   m_ObjectHideFlags: 0
