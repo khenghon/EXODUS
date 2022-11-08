@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7010126585730393209}
   m_Layer: 0
   m_Name: Enemy_Non_Moving
-  m_TagString: Enemy
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
