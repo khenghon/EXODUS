@@ -6,6 +6,7 @@ public class respawn : MonoBehaviour
 {
     public GameObject[] enemy;
     public Transform[] trans;
+    public Transform[] WallsForMovableEnemy;
 
     private float delayTimer = (float) 0.8;
 
@@ -23,15 +24,23 @@ public class respawn : MonoBehaviour
 
     public void spawnEnemy(string tag, Vector3 position, Quaternion rotation)
     {
+        Debug.Log("Here is the tag"+tag);
         if(tag.Equals("Respawn"))
             StartCoroutine(respawnDelay(enemy[0],position, rotation));
         if (tag.Equals("RespawnFiring"))
-            StartCoroutine(respawnDelay(enemy[1], position, rotation));
+            StartCoroutine(respawnDelayMovable(enemy[1], position, rotation));
     }
 
 
     IEnumerator respawnDelay(GameObject enemy, Vector3 position, Quaternion rotation) {
         yield return new WaitForSeconds(delayTimer);
         Instantiate(enemy, position, rotation);
+    }
+
+    IEnumerator respawnDelayMovable(GameObject enemy, Vector3 position, Quaternion rotation)
+    {
+        yield return new WaitForSeconds(delayTimer);
+        GameObject mob = Instantiate(enemy, position, rotation);
+        mob.GetComponent<RandomMove>().points = WallsForMovableEnemy;
     }
 }

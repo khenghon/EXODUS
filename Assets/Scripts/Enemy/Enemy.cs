@@ -28,9 +28,9 @@ public class Enemy : MonoBehaviour
 
     void Die() {
         if (transform.CompareTag("Respawn"))
-            GameObject.Find("Melee Range").GetComponent<respawn>().spawnEnemy("Respawn", transform.position, transform.rotation);
+            GameObject.Find("Melee Test Area").GetComponent<respawn>().spawnEnemy("Respawn", transform.position, transform.rotation);
         if (transform.CompareTag("RespawnFiring"))
-            GameObject.Find("Melee Range").GetComponent<respawn>().spawnEnemy("RespawnFiring", transform.position, transform.rotation);
+            GameObject.Find("Melee Test Area").GetComponent<respawn>().spawnEnemy("RespawnFiring", transform.position, transform.rotation);
 
         Destroy(gameObject);
     }
