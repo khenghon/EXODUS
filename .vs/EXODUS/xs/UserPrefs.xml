@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{40447863-D300-D07E-0518-D77953BED971}|">
+﻿<Properties StartupConfiguration="{3880A72D-B027-A388-0085-1BB5298744FA}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/KatanaSWING.cs">
     <Files>
       <File FileName="Assets/Scripts/KatanaSWING.cs" Line="19" Column="23" />
@@ -8,6 +8,7 @@
         <State name="__root__">
           <Node name="EXODUS" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Scenes" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="KatanaSWING.cs" selected="True" />
               </Node>
@@ -19,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="97581254-8764-4e04-bb65-f1fe67fc4c5e" />
+  <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="501712cf-2146-4d16-9cc6-38a81da7c05b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
