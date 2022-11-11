@@ -42,3 +42,4 @@ public class PickUpItems : MonoBehaviour
         
     }
 }
+// Have taken most of the inspiration from User1 youtube channel
