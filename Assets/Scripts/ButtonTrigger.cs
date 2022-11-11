@@ -14,11 +14,30 @@ public class ButtonTrigger : MonoBehaviour
     public float movementSpeed = 15f;
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("F is pressed down");
             checkButtonPress();
         }
+
+        if (doorOpened)
+        {
+            if (Move_door.transform.position.y <= maximumOpening)
+            {
+                Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
+                //Move_door.transform.position = Vector3.MoveTowards(Move_door.transform.position, Move_door.transform.position + new Vector3(0f, maximumClosing - maximumOpening, 0f), step);
+            }
+        }
+        else
+        {
+            if (Move_door.transform.position.y >= maximumClosing)
+            {
+                Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+                //Move_door.transform.position = Vector3.MoveTowards(Move_door.transform.position, Move_door.transform.position + new Vector3(0f, - maximumClosing - maximumOpening, 0f), step);
+            }
+        }
+
     }
 
     void checkButtonPress()
@@ -32,25 +51,7 @@ public class ButtonTrigger : MonoBehaviour
 
             if (hit.collider.tag == "DoorButton")
             {
-                MoveDoor();
-            }
-        }
-    }
-
-    void MoveDoor()
-    {
-        if (doorOpened)
-        {
-            if (Move_door.transform.position.y <= maximumOpening)
-            {
-                Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
-            }
-        }
-        else
-        {
-            if (Move_door.transform.position.y >= maximumClosing)
-            {
-                Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+                doorOpened = !doorOpened;
             }
         }
     }

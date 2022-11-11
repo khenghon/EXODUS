@@ -23179,8 +23179,8 @@ MonoBehaviour:
   interactionRayDistance: 10
   doorOpened: 0
   Move_door: {fileID: 86228616}
-  maximumOpening: 2.56
-  maximumClosing: 0
+  maximumOpening: 10
+  maximumClosing: 4
   movementSpeed: 15
 --- !u!1 &879196962
 GameObject:
@@ -35047,7 +35047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-8426
+  m_Name: pb_Mesh30312
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -53278,7 +53278,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25242
+  m_Name: pb_Mesh30166
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
