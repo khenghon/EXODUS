@@ -52,6 +52,8 @@ public class KatanaSWING : MonoBehaviour
         if(Attacking == true && collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("RespawnFiring") || collision.gameObject.CompareTag("Respawn"))
         {
             Debug.Log(collision.gameObject.name);
+            //Destroy(other.gameObject);
+
             Enemy target = collision.gameObject.GetComponent<Enemy>();
 
             if (target != null){
