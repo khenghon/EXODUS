@@ -22,7 +22,7 @@ public class automatic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var step = movementSpeed * Time.deltaTime;
+        //var step = movementSpeed * Time.deltaTime;
         if (player_here)
         {
             if (Move_door.transform.position.y <= maximumOpening)
