@@ -8,6 +8,8 @@ public class ButtonTrigger : MonoBehaviour
     public float interactionRayDistance = 10f;
     public bool doorOpened = false;
 
+    public GameObject Button;
+    public GameObject Button1;
     public GameObject Move_door;// Start is called before the first frame update
     public float maximumOpening = 2.51f;
     public float maximumClosing = -3.670279f;
@@ -18,6 +20,21 @@ public class ButtonTrigger : MonoBehaviour
         {
             Debug.Log("F is pressed down");
             checkButtonPress();
+        }
+
+        if (doorOpened)
+        {
+            if (Move_door.transform.position.y <= maximumOpening)
+            {
+                Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
+            }
+        }
+        else
+        {
+            if (Move_door.transform.position.y >= maximumClosing)
+            {
+                Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+            }
         }
     }
 
@@ -30,9 +47,9 @@ public class ButtonTrigger : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            if (hit.collider.tag == "DoorButton")
+            if (hit.collider.gameObject.Equals(Button) || hit.collider.gameObject.Equals(Button1))
             {
-                MoveDoor();
+                doorOpened = !doorOpened;
             }
         }
     }
