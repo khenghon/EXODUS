@@ -7,7 +7,7 @@ public class automatic : MonoBehaviour
     public GameObject Move_door;// Start is called before the first frame update
 
     public float maximumOpening = 2.56f;
-    public float maximumClosing = -3.670279f;
+    public float maximumClosing = 0;
     public float movementSpeed = 15f;
 
     bool player_here;
