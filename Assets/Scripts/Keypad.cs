@@ -21,6 +21,11 @@ public class Keypad : MonoBehaviour
         code.text += number.ToString();
     }
 
+    public void clear_of()
+    {
+        code.text = "";
+    }
+
     public void Execute()
     {
         if (code.text.Equals(Answer))
