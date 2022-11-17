@@ -7,10 +7,14 @@ public class Keypad : MonoBehaviour
 {
     [SerializeField] private Text code;
     [SerializeField] private Animator Door;
-    private string Answer = "12398";
+    private string Answer = "2398";
 
+    private void Start()
+    {
+        code.text = "";
+    }
 
-   public void Number (int number)
+    public void Number (int number)
 
 
     {
@@ -19,10 +23,11 @@ public class Keypad : MonoBehaviour
 
     public void Execute()
     {
-        if (code.text == Answer)
+        if (code.text.Equals(Answer))
         {
             code.text = "Correct";
             Door.SetBool("Open", true);
+            Door.Play("Dooropen");
             StartCoroutine("StopDoor");
 
         }
@@ -33,7 +38,7 @@ public class Keypad : MonoBehaviour
     }
     IEnumerator StopDoor()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.8f);
         Door.SetBool("Open",false);
         Door.enabled = false;
 
