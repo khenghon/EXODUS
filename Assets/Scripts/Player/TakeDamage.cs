@@ -32,6 +32,8 @@ public class TakeDamage : MonoBehaviour
             hb.setHealth(currentHealth);
             setNewHealthCanvas(0.15f);
         }
+
+                         
     }
 
     void takeDamage(int damage) {
