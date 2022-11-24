@@ -18,6 +18,7 @@ public class ItemInspect : MonoBehaviour, IDragHandler
     private PlayerController playerController;
     private MouseLook mouseLook;
     private Vector3 originPosition;
+
     private void Awake()
     {
         controls = new PlayerControls();
