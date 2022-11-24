@@ -1,13 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    private PlayerControls controls;
+    [Range(0, 100)]
+    [SerializeField] private float mouseSensitivity = 100f;
     public Transform playerBody;
-    public float xRotation = 0f;
+    private Vector2 mouseLook;
+    private float xRotation = 0f;
     // Start is called before the first frame update
+    void Awake()
+    {
+        playerBody = transform.parent;
+
+        controls = new PlayerControls();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -16,13 +27,23 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        mouseLook = controls.Player.Look.ReadValue<Vector2>();
+
+        float mouseX = mouseLook.x * mouseSensitivity * Time.deltaTime;
+        float mouseY = mouseLook.y * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 }
