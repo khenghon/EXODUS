@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Animations;
 
 public class TakeDamage : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class TakeDamage : MonoBehaviour
     public int currentHealth;
     public HealthBar hb;
     public Image healthCanvas;
+    public GameObject anim;
 
     private Image backgroundColorReference;
+    private int regenerationCd = 2;
+    private int regenerationRate = -20;
+    private bool isRegenHealth = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,9 @@ public class TakeDamage : MonoBehaviour
         hb.setMaxHealth(maxHealth);
         currentHealth = maxHealth;
         setNewHealthCanvas(0);
+
+        // set health pusalting to false
+        anim.SetActive(false);
     }
 
     private void Update()
@@ -31,12 +39,34 @@ public class TakeDamage : MonoBehaviour
             takeDamage(15);
             hb.setHealth(currentHealth);
             setNewHealthCanvas(0.15f);
-        }
 
-                         
+            // trigger health pulsating
+            if (currentHealth < 50)
+                anim.SetActive(true);
+        }
+        if (currentHealth >= 50) 
+            anim.SetActive(false);
+        if (currentHealth <= maxHealth && !isRegenHealth)
+            StartCoroutine(RegainHealthOverTime());
+
+    }
+
+    private IEnumerator RegainHealthOverTime()
+    {
+        isRegenHealth = true;
+        while (currentHealth < maxHealth)
+        {
+            takeDamage(regenerationRate);
+            hb.setHealth(currentHealth);
+            yield return new WaitForSeconds(regenerationCd);
+        }
+        isRegenHealth = false;
+        
     }
 
     void takeDamage(int damage) {
+        if (currentHealth - damage < 0)
+            currentHealth = 0;
         currentHealth -= damage;
     }
 
