@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{3880A72D-B027-A388-0085-1BB5298744FA}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Restart.cs">
     <Files>
+      <File FileName="Assets/Restart.cs" Line="12" Column="41" />
       <File FileName="Assets/Main.cs" Line="12" Column="5" />
-      <File FileName="Assets/Scripts/PlayerPickUPDrop.cs" Line="18" Column="14" />
+      <File FileName="Assets/Scripts/PlayerPickUPDrop.cs" />
       <File FileName="Assets/Scripts/Keypad.cs" />
-      <File FileName="Assets/Restart.cs" Line="13" Column="1" />
+      <File FileName="Assets/Door/automatic.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EXODUS" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Door" expanded="True" />
               <Node name="Scenes" expanded="True" />
               <Node name="Scripts" expanded="True" />
               <Node name="Restart.cs" selected="True" />
@@ -22,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="4938a72a-c608-41b4-a1ce-84571802a5bc" />
+  <MonoDevelop.Ide.ItemProperties.Addressable__Editor PreferredExecutionTarget="38cdb121-619a-47d9-99d2-51e024eda536" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
