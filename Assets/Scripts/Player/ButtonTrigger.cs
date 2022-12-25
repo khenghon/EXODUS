@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ButtonTrigger : MonoBehaviour
 {
+    private PlayerControls controls;
     public Camera playerCam;
     public float interactionRayDistance = 10f;
     public bool doorOpened = false;
 
     public GameObject Button;
     public GameObject Button1;
-    public GameObject Move_door;// Start is called before the first frame update
+    public GameObject Move_door;
     public float maximumOpening = 2.51f;
     public float maximumClosing = -3.670279f;
     public float movementSpeed = 15f;
+    void Awake()
+    {
+        controls = new PlayerControls();
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (controls.Player.Interact.triggered)
         {
-            Debug.Log("F is pressed down");
+            //Debug.Log("E is pressed down");
             checkButtonPress();
         }
 
@@ -45,7 +51,7 @@ public class ButtonTrigger : MonoBehaviour
 
         if (Physics.Raycast(interactDoorRay, out hit, interactionRayDistance))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             if (hit.collider.gameObject.Equals(Button) || hit.collider.gameObject.Equals(Button1))
             {
@@ -70,5 +76,13 @@ public class ButtonTrigger : MonoBehaviour
                 Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
             }
         }
+    }
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 }

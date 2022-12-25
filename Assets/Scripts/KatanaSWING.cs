@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class KatanaSWING : MonoBehaviour
 {
+    private PlayerControls controls;
     public GameObject Sword;
     public float AttackCD = 0.5f;
     public bool CanAttack = true;
@@ -11,15 +13,14 @@ public class KatanaSWING : MonoBehaviour
     public bool Attacking = false;
     public int damage = 20;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        controls = new PlayerControls();
     }
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (controls.Player.Fire.triggered)
         {
             if (CanAttack)
             {
@@ -58,8 +59,15 @@ public class KatanaSWING : MonoBehaviour
 
             if (target != null){
                 target.TakeDamage(damage);
-                }
-
+            }
+        }
     }
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 }
