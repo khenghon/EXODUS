@@ -8,11 +8,12 @@ TagManager:
   - RespawnFiring
   - Wall
   - InspectableItem
+  - DoorButton
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Postprocessing
   - Water
   - UI
   - Ground
