@@ -19,6 +19,8 @@ public class Pause_Menu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
+                
+
             }
             else
             {
@@ -27,6 +29,11 @@ public class Pause_Menu : MonoBehaviour
 
         }
 
+    }
+    public void QuitGame()
+    {
+     
+            Application.Quit();
     }
     public void PauseGame()
     {
@@ -41,9 +48,10 @@ public class Pause_Menu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-    public void QuitGame()
+    public void RestartGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 
 }
