@@ -496,7 +496,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51136831}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dc800c80cba6af44a6c34bd892442a6, type: 3}
   m_Name: 
@@ -22913,13 +22913,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 963194227}
   interactionRayDistance: 10
-  doorOpened: 0
-  Button: {fileID: 807419071}
-  Button1: {fileID: 1539790339}
-  Move_door: {fileID: 86228616}
-  maximumOpening: 10
-  maximumClosing: 4
-  movementSpeed: 15
 --- !u!114 &874455908
 MonoBehaviour:
   m_ObjectHideFlags: 0

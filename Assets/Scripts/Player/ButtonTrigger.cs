@@ -14,6 +14,8 @@ public class ButtonTrigger : MonoBehaviour
     //public GameObject Button1;
     private GameObject DoorGroup;
     private DoorGroup doorGroupScript;
+    private DoorGroup2 doorGroup2Script;
+    private DoorGroup3 doorGroup3Script;
     //public GameObject Move_door;
     //public float maximumOpening = 2.51f;
     //public float maximumClosing = -3.670279f;
@@ -57,8 +59,21 @@ public class ButtonTrigger : MonoBehaviour
             DoorGroup = hit.collider.gameObject;
             if (DoorGroup.tag == "DoorButton")
             {
-                doorGroupScript = DoorGroup.transform.parent.GetComponent<DoorGroup>();
-                doorGroupScript.doorOpened = !doorGroupScript.doorOpened;
+                if (DoorGroup.transform.parent.tag == "DoorGroup1")
+                {
+                    doorGroupScript = DoorGroup.transform.parent.GetComponent<DoorGroup>();
+                    doorGroupScript.doorOpened = !doorGroupScript.doorOpened;
+                }
+                else if (DoorGroup.transform.parent.tag == "DoorGroup2")
+                {
+                    doorGroup2Script = DoorGroup.transform.parent.GetComponent<DoorGroup2>();
+                    doorGroup2Script.doorOpened = !doorGroup2Script.doorOpened;
+                }
+                else
+                {
+                    doorGroup3Script = DoorGroup.transform.parent.GetComponent<DoorGroup3>();
+                    doorGroup3Script.doorOpened = !doorGroup3Script.doorOpened;
+                }
             }
         }
     }
