@@ -8,14 +8,16 @@ public class ButtonTrigger : MonoBehaviour
     private PlayerControls controls;
     public Camera playerCam;
     public float interactionRayDistance = 10f;
-    public bool doorOpened = false;
+    //public bool doorOpened = false;
 
-    public GameObject Button;
-    public GameObject Button1;
-    public GameObject Move_door;
-    public float maximumOpening = 2.51f;
-    public float maximumClosing = -3.670279f;
-    public float movementSpeed = 15f;
+    //public GameObject Button;
+    //public GameObject Button1;
+    private GameObject DoorGroup;
+    private DoorGroup doorGroupScript;
+    //public GameObject Move_door;
+    //public float maximumOpening = 2.51f;
+    //public float maximumClosing = -3.670279f;
+    //public float movementSpeed = 15f;
     void Awake()
     {
         controls = new PlayerControls();
@@ -28,20 +30,20 @@ public class ButtonTrigger : MonoBehaviour
             checkButtonPress();
         }
 
-        if (doorOpened)
-        {
-            if (Move_door.transform.position.y <= maximumOpening)
-            {
-                Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
-            }
-        }
-        else
-        {
-            if (Move_door.transform.position.y >= maximumClosing)
-            {
-                Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
-            }
-        }
+        //if (doorOpened)
+        //{
+        //    if (Move_door.transform.position.y <= maximumOpening)
+        //    {
+        //        Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
+        //    }
+        //}
+        //else
+        //{
+        //    if (Move_door.transform.position.y >= maximumClosing)
+        //    {
+        //        Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+        //    }
+        //}
     }
 
     void checkButtonPress()
@@ -52,31 +54,32 @@ public class ButtonTrigger : MonoBehaviour
         if (Physics.Raycast(interactDoorRay, out hit, interactionRayDistance))
         {
             //Debug.Log(hit.transform.name);
-
-            if (hit.collider.gameObject.Equals(Button) || hit.collider.gameObject.Equals(Button1))
+            DoorGroup = hit.collider.gameObject;
+            if (DoorGroup.tag == "DoorButton")
             {
-                doorOpened = !doorOpened;
+                doorGroupScript = DoorGroup.transform.parent.GetComponent<DoorGroup>();
+                doorGroupScript.doorOpened = !doorGroupScript.doorOpened;
             }
         }
     }
 
-    void MoveDoor()
-    {
-        if (doorOpened)
-        {
-            if (Move_door.transform.position.y <= maximumOpening)
-            {
-                Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
-            }
-        }
-        else
-        {
-            if (Move_door.transform.position.y >= maximumClosing)
-            {
-                Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
-            }
-        }
-    }
+    //void MoveDoor()
+    //{
+    //    if (doorOpened)
+    //    {
+    //        if (Move_door.transform.position.y <= maximumOpening)
+    //        {
+    //            Move_door.transform.Translate(0f, movementSpeed * Time.deltaTime, 0f);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (Move_door.transform.position.y >= maximumClosing)
+    //        {
+    //            Move_door.transform.Translate(0f, -movementSpeed * Time.deltaTime, 0f);
+    //        }
+    //    }
+    //}
     private void OnEnable()
     {
         controls.Enable();
