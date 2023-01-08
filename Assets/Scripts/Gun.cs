@@ -24,6 +24,7 @@ public class Gun : MonoBehaviour
         if (controls.Player.Fire.triggered)
         {
             muzzleFlash.Play();
+            FindObjectOfType<AudioManager>().Play("GunShot");
             RaycastHit hit;
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
             {
