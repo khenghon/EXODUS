@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu.unity
-    guid: 5a30fd13e2cad43bf984351de3df7883
+    path: Assets/Main Menu.unity
+    guid: ebdf2ab7aa6704e8da10f5ceb3683a3b
   - enabled: 1
-    path: Assets/Scenes/PrototypeScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Intro Scene.unity
+    guid: 4c3479b9be3ea854795d1a0c5bf2c9a6
+  - enabled: 1
+    path: Assets/Terrain stuff/Terrain and sky.unity
+    guid: 5d6f3e79d5a374acea983017c42a283a
+  - enabled: 1
+    path: Assets/Scenes/End Encounter.unity
+    guid: cfdbf48c01ae1be45877bd2a00461c06
+  - enabled: 1
+    path: Assets/Scenes/End Credits.unity
+    guid: 286612b50cad20341b63c997b20e8481
   m_configObjects: {}
