@@ -1,5 +1,7 @@
 # EXODUS
 
+Huan 2 is our Primary Branch
+
 Script/screenplay(opening.doc Can be accessed on GitHub)
 
 You start with a voiceover which acts as a backstory of the protagonist. We wanted to explore the past of the protagonist which acts as a mini prologue.
